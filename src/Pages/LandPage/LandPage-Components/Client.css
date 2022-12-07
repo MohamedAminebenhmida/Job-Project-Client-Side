@@ -1,0 +1,43 @@
+/*--- Google Font ---*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+body {
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden !important;
+    color: #0f105e;
+}
+
+a {
+    text-decoration: none !important;
+    outline: none;
+}
+
+.bg-client {
+    height: 100vh;
+    position: relative;
+}
+
+.client-title::before {
+    content: "";
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #16c8e8, transparent);
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+@media (max-width: 767.98px) {
+    .bg-client {
+        height: auto;
+        padding: 150px 0;
+    }
+}
+.client-slider{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}

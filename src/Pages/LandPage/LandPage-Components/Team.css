@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&family=Roboto:wght@400;500&display=swap");
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #0f105e;
+}
+
+a {
+    text-decoration: none !important;
+    outline: none;
+}
+
+
+.row>* {
+    position: relative;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.team-btn {
+    color: #425be7;
+    border-color: #425be7;
+}
+
+.team-btn:hover {
+    color: #ffffff;
+    background: #425be7;
+    border-color: #425be7;
+    box-shadow: 0px 8px 20px -6px rgba(66, 91, 231, 0.6);
+}
+
+.bg-team {
+    background-color: #e9e6d8;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.sub-title {
+    font-family: "PT Serif", sans-serif;
+    font-weight: 600;
+}
+
+.team-box .team-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-box .team-img img {
+    border-radius: 10px;
+    width: 240px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.team-box .team-img::before,
+.team-box .team-img::after {
+    position: absolute;
+    content: "";
+    left: 7%;
+    right: 7%;
+    transition: all 0.3s;
+    background: rgba(0, 0, 0, 0.3);
+    top: 10%;
+    bottom: 10%;
+    z-index: 1;
+    transform: scale(0, 1);
+}
+
+.team-box .team-img::after {
+    top: 10.8%;
+    bottom: 10.8%;
+    transform: scale(1, 0);
+}
+
+.team-box .team-img .team-social {
+    position: absolute;
+    top: 33%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transform: translateY(50%);
+    padding: 29px;
+    opacity: 0;
+    z-index: 2;
+}
+
+.team-box .team-img .team-social li {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.team-box:hover .team-social {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition-delay: 0.15s;
+    transition: all 0.3s;
+}
+
+.team-box:hover .team-img::before {
+    border-top: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+}
+
+.team-box:hover .team-img::after,
+.team-box:hover .team-img::before {
+    transform: scale(1);
+}
+
+.team-box .team-name {
+    color: #0f105e;
+    transition: all 0.3s ease;
+}
+
+.team-box .team-name:hover {
+    color: #425be7;
+}
+
+@media (min-width: 992px) {
+    .team-box .team-img .team-social {
+        top: 20%;
+        padding: 18px;
+    }
+}
